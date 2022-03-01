@@ -4,6 +4,7 @@ const fs = require("fs");
 fs.writeFile("index.html", "<h1>Hello World</h1>",err=>{
     console.log(err)
 })
+
 const server = http.createServer((req,res)=>{
     fs.readFile("index.html",(err,data)=>{
         res.end(data)
